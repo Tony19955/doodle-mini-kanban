@@ -1,0 +1,16 @@
+.button-submit {
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
+  color: var(--white);
+  transition: 200ms all;
+  background: var(--mariner);
+  border: 2px solid var(--mariner);
+}
+
+.button-submit:hover {
+  background: var(--resolution-blue);
+  border-color: var(--resolution-blue);
+}

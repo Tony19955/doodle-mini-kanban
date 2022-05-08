@@ -2,20 +2,22 @@
 
 :root {
   /* HEX */
-  --grey:            #7d7d7d;
-  --black:           #000000;
-  --white:           #ffffff;
-  --apple:           #6AA84F;
-  --saffron:         #F1C232;
-  --mariner:         #3B5998;
-  --cinnabar:        #DB3737;
-  --dim-gray:        #676767;
-  --gainsboro:       #e2e2e2;
-  --pink-swan:       #b4b4b4;
-  --night-rider:     #353535;
-  --pattens-blue:    #DAE8F4;
-  --very-light-grey: #CCCCCC;
-  --free-speech-red: #AA0000;
+  --grey:              #7d7d7d;
+  --black:             #000000;
+  --white:             #ffffff;
+  --apple:             #6AA84F;
+  --saffron:           #F1C232;
+  --mariner:           #3B5998;
+  --cinnabar:          #DB3737;
+  --dim-gray:          #676767;
+  --gainsboro:         #e2e2e2;
+  --pink-swan:         #b4b4b4;
+  --night-rider:       #353535;
+  --pattens-blue:      #DAE8F4;
+  --resolution-blue:   #224080;
+  --very-light-grey:   #CCCCCC;
+  --free-speech-red:   #AA0000;
+  --medium-red-violet: #B83B79;
   /* RGBA */
   --black-50: rgba(0, 0, 0, 0.5);
   --black-80: rgba(0, 0, 0, 0.8);

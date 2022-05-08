@@ -12,12 +12,6 @@
   justify-content: center;
 }
 
-.board-header-item-counter {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--black);
-}
-
 .board-header-item-title {
   font-size: 18px;
   font-weight: 600;

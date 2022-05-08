@@ -1,0 +1,47 @@
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  padding: 0 15px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--grey);
+  border-radius: 8px;
+  transition: 200ms all;
+  border: 1px solid var(--very-light-grey);
+}
+
+.input:focus {
+  border-color: var(--black);
+}
+
+.label {
+  top: 13px;
+  left: 12.5px;
+  padding: 0 5px;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  color: var(--grey);
+  transition: 200ms all;
+}
+
+.input:focus~.label {
+  top: -10px;
+  left: 10px;
+  color: var(--black);
+  background: var(--white);
+}
+
+.input:not([value=""])~.label {
+  top: -10px;
+  left: 10px;
+  background: var(--white);
+}

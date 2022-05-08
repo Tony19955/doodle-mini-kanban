@@ -1,0 +1,14 @@
+.task-delete-modal-wrapper {
+  width: 500px;
+  height: auto;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.task-delete-modal-text {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--black);
+}

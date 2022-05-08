@@ -1,0 +1,14 @@
+.button-back {
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
+  color: var(--mariner);
+  border: 2px solid var(--mariner);
+}
+
+.button-back:hover {
+  color: var(--resolution-blue);
+  border-color: var(--resolution-blue);
+}

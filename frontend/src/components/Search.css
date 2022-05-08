@@ -33,7 +33,7 @@
 }
 
 .search-input-submit:hover {
-  background: var(--black);
+  background: var(--mariner);
 }
 
 .search-input-submit .search-icon {
