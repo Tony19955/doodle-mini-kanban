@@ -17,6 +17,25 @@
   margin-top: 20px;
 }
 
+.task-editor-history {
+  margin-top: 20px;
+}
+
+.editor-history-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mariner);
+}
+
+.editor-history-value {
+  font-size: 14px;
+  color: var(--dim-gray);
+}
+
+.editor-history-value {
+  margin-bottom: 10px;
+}
+
 .buttons-container {
   display: flex;
   margin-top: 50px;

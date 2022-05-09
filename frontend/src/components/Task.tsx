@@ -9,7 +9,7 @@ import { useFullNameIntials } from '../utils/useFullNameInitials';
 const Task: FC<any> = ({ setModalOpen, refreshList, setTaskData, task, clearTaskData }) => {
 
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
-  const { id, tag, status, description, category, assignee, points } = task || {};
+  const { id, tag, status, description, category, assignee, points, createdAt, updatedAt } = task || {};
 
   const handleTaskEditorOpen = () => {
     setTaskData({ 
@@ -19,7 +19,9 @@ const Task: FC<any> = ({ setModalOpen, refreshList, setTaskData, task, clearTask
       description: description,
       category: category,
       assignee: assignee,
-      points: points
+      points: points,
+      createdAt: createdAt,
+      updatedAt: updatedAt
     })
     setModalOpen(true);
   }
@@ -29,9 +31,15 @@ const Task: FC<any> = ({ setModalOpen, refreshList, setTaskData, task, clearTask
     setDeleteModalOpen(true);
   }
 
+  const onDragStart = (e: any, id: string) => {
+    e.dataTransfer.setData('id', id);
+  }
+
   return (
     <>
-      <div 
+      <div
+        onDragStart={(e) => onDragStart(e, id)}
+        draggable
         className={clsx('task-wrapper', 'green')}
         onClick={handleTaskEditorOpen}
       >

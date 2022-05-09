@@ -32,27 +32,10 @@ export const create = (req, res) => {
     });
 };
 
-// find one with id
-export const findOne = (req, res) => {
-  const id = req.params.id;
-
-  Task.findById(id)
-    .then(data => {
-      if (!data)
-        res.status(404).send({ message: "No Task with id " + id });
-      else res.send(data);
-    })
-    .catch(err => {
-      res
-        .status(500)
-        .send({ message: "ERROR creating Task with id=" + id });
-    });
-};
-
 // Retrieve all Tasks from the database.
 export const findAll = (req, res) => {
-  const title = req.query.title;
-  const condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
+  const category = req.query.category;
+  const condition = category ? { category: { $regex: new RegExp(category) } } : {};
 
   Task.find(condition)
     .then(data => {
@@ -113,62 +96,3 @@ Task.findByIdAndRemove(id)
   });
   });
 };
-
-// Delete all tasks
-export const deleteAll = (req, res) => {
-  Task.deleteMany({})
-    .then(data => {
-      res.send({
-        message: `${data.deletedCount} Tasks were removed successfully!`
-      });
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "ERROR deleting all Tasks"
-      });
-    });
-};
-
-// Find all to do
-export const findAllToDo = (req, res) => {
-  Task.find({ status: 'to do' })
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "ERROR retrieving tasks."
-      });
-    });
-};
-
-// Find all in progress
-export const findAllInProgress = (req, res) => {
-  Task.find({ status: 'in progress' })
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "ERROR retrieving tasks."
-      });
-    });
-};
-
-// Find all done
-export const findAllDone = (req, res) => {
-  Task.find({ status: 'done' })
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "ERROR retrieving tasks."
-      });
-    });
-};
-// add methods to get priorities for each as well

@@ -1,15 +1,26 @@
 import './Board.css';
-import React, { FC } from 'react';
+import React, { useState } from 'react';
 import BoardHeader from './BoardHeader';
 import Search from './Search';
 import TasksContainer from './TasksContainer';
+import SelectBox from './SelectBox';
 
-const Board: FC<any> = ({ children }) => {
+const Board = () => {
+
+  const [searchedText, setSearchedText] = useState('');
+  const [selectedSorting, setSelectedSorting] = useState('Select category');
+
   return (
     <div className='board-wrapper'>
-      <Search />
+      <div className='filters-container'>
+        <Search searchedText={searchedText} setSearchedText={setSearchedText} />
+        <SelectBox selectedSorting={selectedSorting} setSelectedSorting={setSelectedSorting} />
+      </div>
       <BoardHeader />
-      <TasksContainer />
+      <TasksContainer
+        searchedText={searchedText}
+        selectedSorting={selectedSorting}
+        />
     </div>
   );
 };

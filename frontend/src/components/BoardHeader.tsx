@@ -1,7 +1,7 @@
 import './BoardHeader.css';
-import React, { FC } from 'react';
+import React from 'react';
 
-const BoardHeader: FC<any> = () => {
+const BoardHeader = () => {
   return (
     <header className='board-header'>
       <div className='board-header-item'>

@@ -17,6 +17,7 @@ const TaskDeleteModal: FC<any> = ({ isDeleteModalOpen, setDeleteModalOpen, refre
     .catch(e => {
       console.log(e);
     });
+    setDeleteModalOpen(false);
   }
 
   return (

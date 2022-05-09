@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React from 'react';
 import './App.css';
 import Board from './components/Board';
 
-const App: FC<any> = () => {
+const App = () => {
   return (
     <Board />
   );
